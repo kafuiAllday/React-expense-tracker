@@ -1,0 +1,101 @@
+.card{
+  box-sizing: border-box;
+  background-color: rgb(221, 221, 235);
+  padding: .9rem;
+  margin: 1rem;
+  height: 6.5rem;
+  display: flex;
+  border-radius:0.8rem;
+  justify-content: space-between;
+  font-family: sans-serif;
+
+}
+
+.card h3{
+  font-size: 1.2rem;
+  color: midnightblue;
+  font-weight: 700;
+
+}
+  .card p{
+    color: #888;
+    font-weight: 300;
+    letter-spacing: .06rem;
+    
+  }
+  .card h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: midnightblue;
+    margin-left: 85%;
+  }
+  .card button{
+    background-color:rgb(221,221,235) ;
+    border: none;
+    color:purple;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  form{
+    background-color: rgb(221, 221, 235);
+    height: 30vh;
+    box-sizing: border-box;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form input{
+    width: 30%;
+    padding: 1rem;
+    border: 0;
+    border-radius: .3rem;
+    outline-color: rgb(122, 122, 255);
+    margin: 1rem;
+    font-size: 1.2rem;
+
+  }
+  
+  .stats{
+    padding: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: midnightblue;
+    font-size: 1.2rem;
+  }
+  button {
+    padding: .6rem 1rem;
+    color: whitesmoke;
+    background-color: midnightblue;
+    font-size: 1rem;
+    border-radius: .4rem;
+    font-weight: 100;
+    
+  }
+  button .btn-enable{
+    color: red
+  }
+  .alert{
+    color: brown;
+    font-size: 1.2rem;
+    text-align: center;
+
+  }
+  
+
+  @media (max-width:1024px){
+    .card h4{
+      margin-left: 80%;
+    }
+    @media (max-width:750px){
+    .card h4{
+      margin-left: 50%;
+    }
+    }
+  }
+    
+  
