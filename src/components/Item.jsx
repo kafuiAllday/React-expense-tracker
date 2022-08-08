@@ -4,8 +4,12 @@ import './component_css/item.css'
 
 
 function Item({buy, handleDelete}) {
-let today = new Date().getDate()
-let month = new Date().getMonth()+1
+let today = new Date().getDate();
+let month_names = ['January','February','March','April','May','June','July','August','September','October','November','December']
+let d = new Date().getMonth();
+
+let month = month_names[d]
+
 let year = new Date().getFullYear()
 
     
@@ -16,7 +20,7 @@ let year = new Date().getFullYear()
       <div className='card'>
         <div>
         <h3>{buy.text}</h3>
-      <p>{today}/{month}/{year}</p>
+      <p>{month} {today},{year}</p>
         </div>
         
         <h4>{buy.cost}</h4>

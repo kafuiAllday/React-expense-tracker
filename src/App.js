@@ -5,6 +5,7 @@ import ItemList from './components/ItemList'
 import Stats from './components/Stats';
 
 
+
 function App() {
   const [expenditure, setExpenditure] = useState([
     {
@@ -22,7 +23,7 @@ function App() {
       cost:150,
       text:'rent'
     }
-  ])  
+  ])
 
 
   const Additem=(newItem)=>{
@@ -34,7 +35,7 @@ const deleteItem=(id)=>{
 
   return (
     <div>
-       
+      
       <Forms handleAdd={Additem}/> 
       <Stats expenditure={expenditure}/>
       <ItemList expenditure={expenditure} handleDelete={deleteItem}/>
