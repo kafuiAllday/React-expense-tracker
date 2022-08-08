@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import Button from './components/Button';
+import { useState } from 'react'
 import Forms from './components/Forms';
 import ItemList from './components/ItemList'
 import Stats from './components/Stats';
-
+import { v4 as uuidv4} from 'uuid'
 
 
 function App() {
@@ -27,6 +26,7 @@ function App() {
 
 
   const Additem=(newItem)=>{
+    newItem.id = uuidv4()
     setExpenditure([newItem, ...expenditure])
   }
 const deleteItem=(id)=>{
@@ -39,7 +39,6 @@ const deleteItem=(id)=>{
       <Forms handleAdd={Additem}/> 
       <Stats expenditure={expenditure}/>
       <ItemList expenditure={expenditure} handleDelete={deleteItem}/>
-    
     </div>
   )
 }
