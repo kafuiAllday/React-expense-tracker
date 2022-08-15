@@ -12,7 +12,7 @@ function Forms({handleAdd}) {
       setAlert(null)
       
      }else if(text !== '' && text.trim().length < 3){
-      setAlert('text should be more than 4 letters')
+      setAlert('text should be more than 4 characters')
       setBtn_Enable('disabled')
      }
      else{
@@ -32,8 +32,10 @@ function Forms({handleAdd}) {
           cost:cost,
           text:text
         }
-        
+   
         handleAdd(newItem)
+        setText('')
+        setCost(0)
       }
       
       
@@ -46,7 +48,7 @@ function Forms({handleAdd}) {
       <input value={text}  
       placeholder='Expenditure'  type='text' 
       onChange={handleChange} />
-      <button type='submit' disabled={btn_enable}>Send</button>
+      <button type='submit' disabled={btn_enable} className='btn'>Add</button>
     </form>
     <div className="alert">{alert}</div>
       </div>
