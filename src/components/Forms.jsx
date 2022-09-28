@@ -1,23 +1,25 @@
 import React, { useState } from "react"
+import Button from "./Button"
 
 function Forms({handleAdd}) {
     const [cost, setCost] = useState(0)
     const [text, setText] = useState('')
     const [alert, setAlert] = useState('')
-    const [btn_enable, setBtn_Enable] = useState('disabled')
+    const [btn_enable, setBtn_Enable] = useState(true)
 
     const handleCostChange=(e)=>{setCost(e.target.value)}
     const handleChange=(e)=>{
      if(text === ''){
       setAlert(null)
+      setBtn_Enable(true)
       
-     }else if(text !== '' && text.trim().length < 3){
+     }else if(text !== '' && text.trim().length <= 3){
       setAlert('text should be more than 4 characters')
-      setBtn_Enable('disabled')
+      setBtn_Enable(true)
      }
      else{
       setAlert('')
-      setBtn_Enable(null)
+      setBtn_Enable(false)
      }
       setText(e.target.value)
       
@@ -26,16 +28,16 @@ function Forms({handleAdd}) {
 
     const handleSubmit=(e)=>{
       e.preventDefault()
-       
-          
+      if(text.trim().length >= 4){         
         const newItem = {
           cost:cost,
-          text:text
+          text:text,
         }
-   
         handleAdd(newItem)
         setText('')
         setCost(0)
+      }
+       
       }
       
       
@@ -48,7 +50,8 @@ function Forms({handleAdd}) {
       <input value={text}  
       placeholder='Expenditure'  type='text' 
       onChange={handleChange} />
-      <button type='submit' disabled={btn_enable} className='btn'>Add</button>
+      <Button type='submit' version={btn_enable ? 'unable' : 'able'}
+      isdisabled={btn_enable}>Add +</Button>
     </form>
     <div className="alert">{alert}</div>
       </div>

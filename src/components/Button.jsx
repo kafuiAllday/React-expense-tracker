@@ -1,10 +1,10 @@
 
 
-function Button({children,isDiasbled,type,version}) {
+function Button({children,isdisabled,type,version}) {
   return (
-    <div>
+    <button className={version} disabled={isdisabled} type={type}>
         {children}
-    </div>
+    </button>
   )
 }
 

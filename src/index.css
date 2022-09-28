@@ -67,15 +67,29 @@
     color: midnightblue;
     font-size: 1.2rem;
   }
-  button {
+  .able {
     padding: .6rem 1rem;
-    color: whitesmoke;
+    color: gold;
     background-color: midnightblue;
+    font-size: 1rem;
+    border-radius: .4rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    
+  
+  }
+  .unable {
+    padding: .6rem 1rem;
+    color: #222;
+    background-color: grey;
     font-size: 1rem;
     border-radius: .4rem;
     font-weight: 100;
     
   }
+
+
  
   .alert{
     color: brown;

@@ -1,23 +1,23 @@
 {
   "expenditure": [
     {
-      "id": 1,
-      "cost": 100,
-      "text": "food"
+      "cost": "120",
+      "text": "food",
+      "id": 1
     },
     {
-      "id": 2,
-      "cost": 200,
-      "text": "Rent"
+      "cost": "200",
+      "text": "rent",
+      "id": 2
     },
     {
-      "id": 3,
-      "cost": 300,
-      "text": "clothing"
+      "cost": "100",
+      "text": "clothing",
+      "id": 3
     },
     {
-      "cost": "250",
-      "text": "healthcare",
+      "cost": "80",
+      "text": "books",
       "id": 4
     }
   ]
