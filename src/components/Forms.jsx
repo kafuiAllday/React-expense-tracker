@@ -44,7 +44,9 @@ function Forms({handleAdd}) {
       return (   
         <div>
     <form onSubmit={handleSubmit}>
-    
+      <div>
+        
+      </div>
         <input value={cost} placeholder='Cost in ghc'
         type='number' onChange={handleCostChange} />
       <input value={text}  

@@ -3,6 +3,7 @@ import Forms from './components/Forms';
 import ItemList from './components/ItemList'
 import Stats from './components/Stats';
 import { v4 as uuidv4} from 'uuid'
+import Header from './components/Header';
 
 
 function App() {
@@ -27,7 +28,7 @@ const deleteItem=(id)=>{
 
   return (
     <div>
-      
+      <Header />
       <Forms handleAdd={Additem}/> 
       <Stats expenditure={expenditure}/>
       <ItemList expenditure={expenditure} handleDelete={deleteItem}/>
