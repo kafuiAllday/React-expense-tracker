@@ -13,8 +13,8 @@ function Forms({handleAdd}) {
       setAlert(null)
       setBtn_Enable(true)
       
-     }else if(text !== '' && text.trim().length <= 3){
-      setAlert('text should be more than 4 characters')
+     }else if(text !== '' && text.trim().length <= 1){
+      setAlert('text should be more than 2 characters')
       setBtn_Enable(true)
      }
      else{
@@ -28,7 +28,7 @@ function Forms({handleAdd}) {
 
     const handleSubmit=(e)=>{
       e.preventDefault()
-      if(text.trim().length >= 4){         
+      if(text.trim().length >= 2){         
         const newItem = {
           cost:cost,
           text:text,
