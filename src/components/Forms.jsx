@@ -10,25 +10,22 @@ function Forms({handleAdd}) {
     const handleCostChange=(e)=>{setCost(e.target.value)}
     const handleChange=(e)=>{
      if(text === ''){
-      setAlert(null)
+      setAlert('text should be more than 1 character')
       setBtn_Enable(true)
       
-     }else if(text !== '' && text.trim().length <= 1){
-      setAlert('text should be more than 2 characters')
-      setBtn_Enable(true)
      }
-     else{
+     else if(text !=='') {
       setAlert('')
       setBtn_Enable(false)
      }
       setText(e.target.value)
-      
+    
     
     }
 
     const handleSubmit=(e)=>{
       e.preventDefault()
-      if(text.trim().length >= 2){         
+      if(text !== ''){         
         const newItem = {
           cost:cost,
           text:text,
